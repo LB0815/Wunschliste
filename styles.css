@@ -239,6 +239,7 @@ kbd { padding: 3px 6px; border: 1px solid #e4e6df; border-radius: 3px; color: #8
   border: 1px solid #e8eae4;
   border-radius: 5px;
   background: #fff;
+  cursor: pointer;
   transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
 }
 
