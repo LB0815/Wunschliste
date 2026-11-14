@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#172720">
+    <meta name="description" content="Eine liebevoll gestaltete Übersicht deiner Wunschliste.">
+    <title>Wunschliste — Wünsche, die warten</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Wunschliste Startseite">
+        <span class="brand-mark" aria-hidden="true">w.</span>
+        <span>Wunschliste</span>
+      </a>
+      <a class="top-link" href="#wunschliste">Zur Übersicht <span aria-hidden="true">↘</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> DEINE PERSÖNLICHE SAMMLUNG</p>
+          <h1 id="hero-title">Wünsche,<br>die <span>warten.</span></h1>
+          <p class="hero-description">Gute Ideen gehen nicht verloren. Hier findest du alles, was du dir vorgemerkt hast – auf einen Blick.</p>
+          <a class="hero-cta" href="#wunschliste">Wünsche entdecken <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="hero-spark">✳</div>
+          <div class="hero-note">
+            <span class="note-stars">★★★★</span>
+            <span>Deine nächste<br>Inspiration wartet.</span>
+            <span class="note-arrow">↗</span>
+          </div>
+          <span class="art-caption">SAMMELN. TRÄUMEN. FREUEN.</span>
+        </div>
+        <div class="hero-bottom">
+          <span>DEIN WUNSCHZETTEL, NEU GEDACHT</span>
+          <span>01 — 16 <i></i> VORSCHLÄGE</span>
+        </div>
+      </section>
+
+      <section class="collection" id="wunschliste" aria-labelledby="collection-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">DIE GUTE AUSWAHL</p>
+            <h2 id="collection-title">Auf deiner Liste<span>.</span></h2>
+          </div>
+          <div class="collection-count"><span id="item-count">16</span><span>Wünsche<br>gesammelt</span></div>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="visually-hidden">Wunschliste durchsuchen</span>
+            <input id="search" type="search" placeholder="Wonach suchst du?" autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+          <label class="sort-control">
+            <span>Sortieren</span>
+            <select id="sort">
+              <option value="important">Wichtigkeit</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+          <button class="surprise-button" id="surprise" type="button"><span aria-hidden="true">✳</span> Überrasch mich</button>
+        </div>
+
+        <div class="filters" role="group" aria-label="Wünsche filtern">
+          <button class="filter-chip is-active" data-category="all" type="button">Alles <span>16</span></button>
+          <button class="filter-chip" data-category="books" type="button">Bücher <span>12</span></button>
+          <button class="filter-chip" data-category="tech" type="button">Technik <span>2</span></button>
+          <button class="filter-chip" data-category="models" type="button">Modelle <span>2</span></button>
+          <button class="filter-chip saved-filter" id="saved-filter" type="button" aria-pressed="false">♡ Merkliste <span id="saved-count">0</span></button>
+        </div>
+
+        <p class="price-notice"><span aria-hidden="true">ⓘ</span> Preise waren in der ODS-Tabelle nicht eingetragen – sie sind hier als offen markiert.</p>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">◌</span>
+          <h3>Hier ist es noch ganz ruhig.</h3>
+          <p>Mit anderen Suchbegriffen findest du vielleicht deinen Wunsch.</p>
+          <button id="clear-filters" type="button">Filter zurücksetzen</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">w.</span><span>Wunschliste</span></a>
+      <p>Mit Vorfreude zusammengestellt. <span aria-hidden="true">✳</span></p>
+      <a href="#wunschliste">Zurück nach oben ↑</a>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
